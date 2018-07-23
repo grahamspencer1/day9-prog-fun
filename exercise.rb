@@ -23,12 +23,19 @@ trains = [
 #   {train: "80A", frequency_in_minutes: 30, direction: "east"}
 # ]
 
+northbound = []
+eastbound = []
 
-
-def destination(direction, train)
-  if direction == "north"
-    return direction
+trains.each do |train|
+  if train[:direction] == "north"
+    northbound.push(train[:train])
+  elsif train[:direction] == "east"
+    eastbound.push(train[:train])
   end
 end
 
-puts destination
+puts "Trains heading north: #{northbound}"
+puts "Trains heading east: #{eastbound}"
+
+trains[7][:first_departure_time] = 12
+puts trains
